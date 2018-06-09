@@ -156,10 +156,7 @@ function collisionDetection(){
 		}
 
 	}
-	if(mouseX<0){
-		alert("Game Over");
-		window.location.reload(true);
-	}
+	
 }
 function checkEnemies(mouseX,mouseY){
 
@@ -204,7 +201,10 @@ function draw(){
 	ctx.fillStyle = "white";
 	ctx.fillText("Score "+score,10,30);
 	ctx.closePath();
-
+	if(mouseX<0){
+		alert("Game Over");
+		window.location.reload(true);
+	}
 
 	if (!first){
 	requestAnimationFrame(draw);
